@@ -35,6 +35,24 @@ namespace Nay_Aung_Latt
             txtGameName.Focus();
         }
 
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            //Variables.
+            string gameName;
+            double gamePrice, tax, totalPrice;
+
+            //Assigning variables.
+            gameName = txtGameName.Text;
+            gamePrice = double.Parse(txtGamePrice.Text);
+            tax = 0.1;
+            totalPrice = gamePrice + (gamePrice * tax);
+
+            //Output.
+            lstOutput.Items.Add("Game: " + gameName);
+            lstOutput.Items.Add("Price: " + gamePrice.ToString("C") + " (Tax: " + tax.ToString("P0") + ")");
+            lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

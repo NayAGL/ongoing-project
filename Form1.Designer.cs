@@ -74,7 +74,7 @@
             // 
             txtGameName.Location = new Point(84, 82);
             txtGameName.Name = "txtGameName";
-            txtGameName.Size = new Size(193, 27);
+            txtGameName.Size = new Size(178, 27);
             txtGameName.TabIndex = 3;
             txtGameName.Enter += txtGameName_Enter;
             txtGameName.Leave += txtGameName_Leave;
@@ -83,7 +83,7 @@
             // 
             txtGamePrice.Location = new Point(84, 115);
             txtGamePrice.Name = "txtGamePrice";
-            txtGamePrice.Size = new Size(193, 27);
+            txtGamePrice.Size = new Size(178, 27);
             txtGamePrice.TabIndex = 4;
             txtGamePrice.Enter += txtGamePrice_Enter;
             txtGamePrice.Leave += txtGamePrice_Leave;
@@ -97,21 +97,22 @@
             btnCalculate.TabIndex = 5;
             btnCalculate.Text = "&Calculate";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // lstOutput
             // 
             lstOutput.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lstOutput.FormattingEnabled = true;
-            lstOutput.Location = new Point(293, 81);
+            lstOutput.Location = new Point(268, 81);
             lstOutput.Name = "lstOutput";
-            lstOutput.Size = new Size(168, 64);
+            lstOutput.Size = new Size(228, 64);
             lstOutput.TabIndex = 6;
             lstOutput.TabStop = false;
             // 
             // btnReset
             // 
             btnReset.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.Location = new Point(293, 151);
+            btnReset.Location = new Point(268, 148);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(60, 29);
             btnReset.TabIndex = 7;
@@ -146,7 +147,7 @@
             Controls.Add(lblGameName);
             Controls.Add(lblFormTitle);
             Name = "Form1";
-            Text = "ICA 2 - Nay Aung Latt";
+            Text = "ICA 3 - Nay Aung Latt";
             ResumeLayout(false);
             PerformLayout();
         }
