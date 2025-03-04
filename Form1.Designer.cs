@@ -44,7 +44,7 @@
             lblFormTitle.AutoSize = true;
             lblFormTitle.Font = new Font("Cascadia Mono", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFormTitle.ForeColor = SystemColors.ControlText;
-            lblFormTitle.Location = new Point(142, 9);
+            lblFormTitle.Location = new Point(201, 9);
             lblFormTitle.Name = "lblFormTitle";
             lblFormTitle.Size = new Size(193, 37);
             lblFormTitle.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             lblGameName.AutoSize = true;
             lblGameName.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGameName.Location = new Point(36, 85);
+            lblGameName.Location = new Point(18, 83);
             lblGameName.Name = "lblGameName";
             lblGameName.Size = new Size(45, 20);
             lblGameName.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             lblGamePrice.AutoSize = true;
             lblGamePrice.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGamePrice.Location = new Point(27, 117);
+            lblGamePrice.Location = new Point(9, 115);
             lblGamePrice.Name = "lblGamePrice";
             lblGamePrice.Size = new Size(54, 20);
             lblGamePrice.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // txtGameName
             // 
-            txtGameName.Location = new Point(84, 82);
+            txtGameName.Location = new Point(66, 80);
             txtGameName.Name = "txtGameName";
             txtGameName.Size = new Size(178, 27);
             txtGameName.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // txtGamePrice
             // 
-            txtGamePrice.Location = new Point(84, 115);
+            txtGamePrice.Location = new Point(66, 113);
             txtGamePrice.Name = "txtGamePrice";
             txtGamePrice.Size = new Size(178, 27);
             txtGamePrice.TabIndex = 4;
@@ -91,7 +91,7 @@
             // btnCalculate
             // 
             btnCalculate.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCalculate.Location = new Point(84, 148);
+            btnCalculate.Location = new Point(66, 157);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(88, 29);
             btnCalculate.TabIndex = 5;
@@ -103,16 +103,16 @@
             // 
             lstOutput.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lstOutput.FormattingEnabled = true;
-            lstOutput.Location = new Point(268, 81);
+            lstOutput.Location = new Point(250, 80);
             lstOutput.Name = "lstOutput";
-            lstOutput.Size = new Size(228, 64);
+            lstOutput.Size = new Size(333, 104);
             lstOutput.TabIndex = 6;
             lstOutput.TabStop = false;
             // 
             // btnReset
             // 
             btnReset.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.Location = new Point(268, 148);
+            btnReset.Location = new Point(184, 157);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(60, 29);
             btnReset.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             btnExit.BackColor = Color.AliceBlue;
             btnExit.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(441, 197);
+            btnExit.Location = new Point(519, 217);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(60, 29);
             btnExit.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(508, 233);
+            ClientSize = new Size(592, 254);
             Controls.Add(btnExit);
             Controls.Add(btnReset);
             Controls.Add(lstOutput);

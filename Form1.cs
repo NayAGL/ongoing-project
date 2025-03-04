@@ -39,18 +39,23 @@ namespace Nay_Aung_Latt
         {
             //Variables.
             string gameName;
-            double gamePrice, tax, totalPrice;
+            double gamePrice, taxRate, taxAmount, totalPrice;
 
             //Assigning variables.
             gameName = txtGameName.Text;
             gamePrice = double.Parse(txtGamePrice.Text);
-            tax = 0.1;
-            totalPrice = gamePrice + (gamePrice * tax);
+            taxRate = 0.0875;
+            taxAmount = gamePrice * taxRate;
+            totalPrice = gamePrice + taxAmount;
 
             //Output.
             lstOutput.Items.Add("Game: " + gameName);
-            lstOutput.Items.Add("Price: " + gamePrice.ToString("C") + " (Tax: " + tax.ToString("P0") + ")");
+            lstOutput.Items.Add("Price: " + gamePrice.ToString("C"));
+            lstOutput.Items.Add("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
             lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
+
+            //Focus.
+            btnReset.Focus();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
