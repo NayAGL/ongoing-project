@@ -136,7 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(592, 254);
+            ClientSize = new Size(591, 258);
             Controls.Add(btnExit);
             Controls.Add(btnReset);
             Controls.Add(lstOutput);
@@ -147,7 +147,7 @@
             Controls.Add(lblGameName);
             Controls.Add(lblFormTitle);
             Name = "Form1";
-            Text = "ICA 3 - Nay Aung Latt";
+            Text = "ICA 4 - Nay Aung Latt";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -40,19 +40,26 @@ namespace Nay_Aung_Latt
             //Variables.
             string gameName;
             double gamePrice, taxRate, taxAmount, totalPrice;
+            bool priceValid;
 
             //Assigning variables.
             gameName = txtGameName.Text;
-            gamePrice = double.Parse(txtGamePrice.Text);
+            //gamePrice = double.Parse(txtGamePrice.Text);
+            priceValid = double.TryParse(txtGamePrice.Text, out gamePrice); //Returns whether TryParse worked or not.
             taxRate = 0.0875;
-            taxAmount = gamePrice * taxRate;
-            totalPrice = gamePrice + taxAmount;
 
-            //Output.
-            lstOutput.Items.Add("Game: " + gameName);
-            lstOutput.Items.Add("Price: " + gamePrice.ToString("C"));
-            lstOutput.Items.Add("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
-            lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
+            if (priceValid)
+            {
+                taxAmount = gamePrice * taxRate;
+                totalPrice = gamePrice + taxAmount;
+
+                //Output.
+                lstOutput.Items.Add("Game: " + gameName);
+                lstOutput.Items.Add("Price: " + gamePrice.ToString("C"));
+                lstOutput.Items.Add("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
+                lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
+            }
+            else { lstOutput.Items.Add("Invalid price value."); }
 
             //Focus.
             btnReset.Focus();
@@ -60,7 +67,12 @@ namespace Nay_Aung_Latt
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult buttonSelected;
+            buttonSelected = MessageBox.Show("Program is being closed! Are you sure?",
+                                             "Exiting...", MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question);
+
+            if (buttonSelected == DialogResult.Yes) { this.Close(); }
         }
     }
 }
