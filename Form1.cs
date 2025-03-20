@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.Logging;
+
 namespace Nay_Aung_Latt
 {
     public partial class Form1 : Form
@@ -9,6 +11,8 @@ namespace Nay_Aung_Latt
 
         //Class level variables.
         private string platformType;
+        private string configFile = "platformCFG.txt";
+        private string logFile = "logTran.txt";
         const string PC = "PC";
         const string PLAYSTATION = "PlayStation";
         const string XBOX = "Xbox";
@@ -69,6 +73,7 @@ namespace Nay_Aung_Latt
             string gameName;
             double gamePrice, taxRate, taxAmount, totalPrice, markupRate, markupAmount, finalPrice;
             bool priceValid;
+            StreamWriter log;
 
             //Assigning variables.
             gameName = txtGameName.Text;
@@ -77,24 +82,24 @@ namespace Nay_Aung_Latt
             taxRate = 0.0875;
             markupRate = 0.0;
 
-            switch (platformType)
-            {
-                case PC:
-                    markupRate = 0.12;
-                    break;
-                case PLAYSTATION:
-                    markupRate = 0.15;
-                    break;
-                case XBOX:
-                    markupRate = 0.30;
-                    break;
-                default:
-                    lstOutput.Items.Add("This should never happen.");
-                    break;
-            }
-
             if (priceValid)
             {
+                switch (platformType)
+                {
+                    case PC:
+                        markupRate = 0.12;
+                        break;
+                    case PLAYSTATION:
+                        markupRate = 0.15;
+                        break;
+                    case XBOX:
+                        markupRate = 0.30;
+                        break;
+                    default:
+                        lstOutput.Items.Add("This should never happen.");
+                        break;
+                }
+
                 //Calculations.
                 taxAmount = gamePrice * taxRate;
                 totalPrice = gamePrice + taxAmount;
@@ -103,15 +108,34 @@ namespace Nay_Aung_Latt
 
                 //Output.
                 lstOutput.Items.Add("Game: " + gameName);
+                lstOutput.Items.Add("Platform: " + platformType);
                 lstOutput.Items.Add("Price: " + gamePrice.ToString("C"));
                 lstOutput.Items.Add("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
                 lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
                 lstOutput.Items.Add("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
                 lstOutput.Items.Add("Final Price: " + finalPrice.ToString("C"));
+
+                //Opening the file to append it.
+                log = File.AppendText(logFile);
+
+                //Writing each line in 'logTran.txt'.
+                log.WriteLine("--------- Beginning of Transaction ---------");
+                log.WriteLine("Game: " + gameName);
+                log.WriteLine("Platform: " + platformType);
+                log.WriteLine("Price: " + gamePrice.ToString("C"));
+                log.WriteLine("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
+                log.WriteLine("Total Price: " + totalPrice.ToString("C"));
+                log.WriteLine("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
+                log.WriteLine("Final Price: " + finalPrice.ToString("C"));
+                log.WriteLine("---------  [" + DateTime.Now.ToString("G") + "]  ---------");
+                log.WriteLine(""); 
+
+                //Closes 'logTran.txt'.
+                log.Close();
             }
             else { lstOutput.Items.Add("Invalid price value."); }
 
-            //Focus.
+            //Setting the Focus.
             btnReset.Focus();
         }
 

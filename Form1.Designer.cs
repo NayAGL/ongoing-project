@@ -59,7 +59,7 @@
             // 
             lblGameName.AutoSize = true;
             lblGameName.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGameName.Location = new Point(18, 145);
+            lblGameName.Location = new Point(18, 162);
             lblGameName.Name = "lblGameName";
             lblGameName.Size = new Size(45, 20);
             lblGameName.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             lblGamePrice.AutoSize = true;
             lblGamePrice.Font = new Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGamePrice.Location = new Point(9, 177);
+            lblGamePrice.Location = new Point(9, 194);
             lblGamePrice.Name = "lblGamePrice";
             lblGamePrice.Size = new Size(54, 20);
             lblGamePrice.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // txtGameName
             // 
-            txtGameName.Location = new Point(66, 142);
+            txtGameName.Location = new Point(66, 159);
             txtGameName.Name = "txtGameName";
             txtGameName.Size = new Size(178, 27);
             txtGameName.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             // txtGamePrice
             // 
-            txtGamePrice.Location = new Point(66, 175);
+            txtGamePrice.Location = new Point(66, 192);
             txtGamePrice.Name = "txtGamePrice";
             txtGamePrice.Size = new Size(178, 27);
             txtGamePrice.TabIndex = 4;
@@ -96,7 +96,7 @@
             // btnCalculate
             // 
             btnCalculate.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCalculate.Location = new Point(66, 219);
+            btnCalculate.Location = new Point(66, 265);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(88, 29);
             btnCalculate.TabIndex = 5;
@@ -110,14 +110,14 @@
             lstOutput.FormattingEnabled = true;
             lstOutput.Location = new Point(250, 142);
             lstOutput.Name = "lstOutput";
-            lstOutput.Size = new Size(467, 104);
+            lstOutput.Size = new Size(467, 164);
             lstOutput.TabIndex = 6;
             lstOutput.TabStop = false;
             // 
             // btnReset
             // 
             btnReset.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.Location = new Point(184, 219);
+            btnReset.Location = new Point(184, 265);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(60, 29);
             btnReset.TabIndex = 7;
@@ -129,7 +129,7 @@
             // 
             btnExit.BackColor = Color.AliceBlue;
             btnExit.Font = new Font("Cascadia Mono", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(657, 279);
+            btnExit.Location = new Point(657, 345);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(60, 29);
             btnExit.TabIndex = 8;
@@ -193,7 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(724, 318);
+            ClientSize = new Size(724, 382);
             Controls.Add(gpbPlatforms);
             Controls.Add(btnExit);
             Controls.Add(btnReset);
@@ -205,7 +205,7 @@
             Controls.Add(lblGameName);
             Controls.Add(lblFormTitle);
             Name = "Form1";
-            Text = "ICA 5 - Nay Aung Latt";
+            Text = "ICA 6 - Nay Aung Latt";
             Load += Form1_Load;
             gpbPlatforms.ResumeLayout(false);
             gpbPlatforms.PerformLayout();

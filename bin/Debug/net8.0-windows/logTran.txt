@@ -1,0 +1,30 @@
+--------- Beginning of Transaction ---------
+Game: SIGNALIS
+Platform: PC
+Price: $19.99
+Tax Amount: $1.75 (Tax Rate: 8.75%)
+Total Price: $21.74
+Markup Amount: $2.61 (Markup Rate: 12.00%)
+Final Price: $24.35
+---------  [3/19/2025 9:15:32 PM]  ---------
+
+--------- Beginning of Transaction ---------
+Game: R.E.P.O
+Platform: PlayStation
+Price: $9.99
+Tax Amount: $0.87 (Tax Rate: 8.75%)
+Total Price: $10.86
+Markup Amount: $1.63 (Markup Rate: 15.00%)
+Final Price: $12.49
+---------  [3/19/2025 9:16:00 PM]  ---------
+
+--------- Beginning of Transaction ---------
+Game: Minecraft
+Platform: Xbox
+Price: $39.99
+Tax Amount: $3.50 (Tax Rate: 8.75%)
+Total Price: $43.49
+Markup Amount: $13.05 (Markup Rate: 30.00%)
+Final Price: $56.54
+---------  [3/19/2025 9:16:29 PM]  ---------
+
