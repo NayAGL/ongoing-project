@@ -28,3 +28,33 @@ Markup Amount: $13.05 (Markup Rate: 30.00%)
 Final Price: $56.54
 ---------  [3/19/2025 9:16:29 PM]  ---------
 
+--------- Beginning of Transaction ---------
+Game: Monster Hunter: Wilds
+Platform: PlayStation
+Price: $59.99
+Tax Amount: $5.25 (Tax Rate: 8.75%)
+Total Price: $65.24
+Markup Amount: $9.79 (Markup Rate: 15.00%)
+Final Price: $75.02
+---------  [3/26/2025 11:34:59 PM]  ---------
+
+--------- Beginning of Transaction ---------
+Game: GoW (2018)
+Platform: Xbox
+Price: $49.99
+Tax Amount: $4.37 (Tax Rate: 8.75%)
+Total Price: $54.36
+Markup Amount: $16.31 (Markup Rate: 30.00%)
+Final Price: $70.67
+---------  [3/26/2025 11:39:55 PM]  ---------
+
+--------- Beginning of Transaction ---------
+Game: Nekopara Volume 1.
+Platform: PC
+Price: $19.99
+Tax Amount: $1.75 (Tax Rate: 8.75%)
+Total Price: $21.74
+Markup Amount: $2.61 (Markup Rate: 12.00%)
+Final Price: $24.35
+---------  [3/26/2025 11:40:41 PM]  ---------
+

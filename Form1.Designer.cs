@@ -41,6 +41,7 @@
             rdoXbox = new RadioButton();
             rdoPlayStation = new RadioButton();
             rdoPC = new RadioButton();
+            OFD = new OpenFileDialog();
             gpbPlatforms.SuspendLayout();
             SuspendLayout();
             // 
@@ -189,6 +190,10 @@
             rdoPC.UseVisualStyleBackColor = true;
             rdoPC.CheckedChanged += rdoPC_CheckedChanged;
             // 
+            // OFD
+            // 
+            OFD.FileName = "OFD";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -205,7 +210,7 @@
             Controls.Add(lblGameName);
             Controls.Add(lblFormTitle);
             Name = "Form1";
-            Text = "ICA 6 - Nay Aung Latt";
+            Text = "ICA 7 - Nay Aung Latt";
             Load += Form1_Load;
             gpbPlatforms.ResumeLayout(false);
             gpbPlatforms.PerformLayout();
@@ -228,5 +233,6 @@
         private RadioButton rdoXbox;
         private RadioButton rdoPlayStation;
         private RadioButton rdoPC;
+        private OpenFileDialog OFD;
     }
 }

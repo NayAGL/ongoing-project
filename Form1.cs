@@ -1,5 +1,3 @@
-using Microsoft.VisualBasic.Logging;
-
 namespace Nay_Aung_Latt
 {
     public partial class Form1 : Form
@@ -10,16 +8,57 @@ namespace Nay_Aung_Latt
         }
 
         //Class level variables.
-        private string platformType;
-        private string configFile = "platformCFG.txt";
-        private string logFile = "logTran.txt";
         const string PC = "PC";
         const string PLAYSTATION = "PlayStation";
         const string XBOX = "Xbox";
+        private string platformType;
+        private string configFile = "platformCFG1.txt"; //Intentionally wrote the wrong file name.
+        private string logFile = "logTran.txt";
+        private double markupRatePC;
+        private double markupRatePlayStation;
+        private double markupRateXbox;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            StreamReader srCfg;
+            bool fileWasNotFound = true;
+
             rdoPC.Checked = true;
+
+           do
+            {
+                try
+                {
+                    srCfg = File.OpenText(configFile);
+                    fileWasNotFound = false;
+
+                    markupRatePC = double.Parse(srCfg.ReadLine());
+                    markupRatePlayStation = double.Parse(srCfg.ReadLine());
+                    markupRateXbox = double.Parse(srCfg.ReadLine());
+
+                    srCfg.Close();
+                }
+                catch (FileNotFoundException ex)
+                {
+                    MessageBox.Show(ex.Message + " Enter a new file name.", "File Not Found!");
+
+                    OFD.Title = "Open Configuration File";
+                    OFD.Filter = "Text Files |*.txt | All Files | *.*";
+                    OFD.ShowDialog();
+                    configFile = OFD.FileName;
+                }
+                catch (FormatException ex) //If something is bad in the file and you can't depend on anything in the file.
+                {
+                    lstOutput.Items.Add("File data corrupted! Values were set to defaults.");
+                    lstOutput.Items.Add(ex.Message);
+
+                    //Setting default values for markup rates.
+                    markupRatePC = 0.12;
+                    markupRatePlayStation = 0.15;
+                    markupRateXbox = 0.30;
+                }
+
+            } while (fileWasNotFound);
         }
 
         private void rdoPC_CheckedChanged(object sender, EventArgs e)
@@ -87,13 +126,13 @@ namespace Nay_Aung_Latt
                 switch (platformType)
                 {
                     case PC:
-                        markupRate = 0.12;
+                        markupRate = markupRatePC;
                         break;
                     case PLAYSTATION:
-                        markupRate = 0.15;
+                        markupRate = markupRatePlayStation;
                         break;
                     case XBOX:
-                        markupRate = 0.30;
+                        markupRate = markupRateXbox;
                         break;
                     default:
                         lstOutput.Items.Add("This should never happen.");
