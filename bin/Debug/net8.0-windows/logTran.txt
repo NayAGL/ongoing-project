@@ -58,3 +58,13 @@ Markup Amount: $2.61 (Markup Rate: 12.00%)
 Final Price: $24.35
 ---------  [3/26/2025 11:40:41 PM]  ---------
 
+--------- Beginning of Transaction ---------
+Game: Strinova
+Platform: PlayStation
+Price: $9.99
+Tax Amount: $0.87 (Tax Rate: 8.75%)
+Total Price: $10.86
+Markup Amount: $1.63 (Markup Rate: 15.00%)
+Final Price: $12.49
+---------  [4/2/2025 8:01:03 PM]  ---------
+

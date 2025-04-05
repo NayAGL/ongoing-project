@@ -18,6 +18,34 @@ namespace Nay_Aung_Latt
         private double markupRatePlayStation;
         private double markupRateXbox;
 
+        public double MarkupRatePC
+        {
+            get { return markupRatePC; }
+            set
+            {
+                //Property that doesn't allow the setting to be negative or greater than 50%.
+                if (value >= 0 || value <= 0.5) { markupRatePC = value; }
+            }
+        }
+
+        public double MarkupRatePlayStation
+        {
+            get { return markupRatePlayStation; }
+            set
+            {
+                if (value >= 0 || value <= 0.5) { markupRatePlayStation = value; }
+            }
+        }
+
+        public double MarkupRateXbox
+        {
+            get { return markupRateXbox; }
+            set
+            {
+                if (value >= 0 || value <= 0.5) { markupRateXbox = value; }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             StreamReader srCfg;
@@ -32,9 +60,9 @@ namespace Nay_Aung_Latt
                     srCfg = File.OpenText(configFile);
                     fileWasNotFound = false;
 
-                    markupRatePC = double.Parse(srCfg.ReadLine());
-                    markupRatePlayStation = double.Parse(srCfg.ReadLine());
-                    markupRateXbox = double.Parse(srCfg.ReadLine());
+                    MarkupRatePC = double.Parse(srCfg.ReadLine());
+                    MarkupRatePlayStation = double.Parse(srCfg.ReadLine());
+                    MarkupRateXbox = double.Parse(srCfg.ReadLine());
 
                     srCfg.Close();
                 }

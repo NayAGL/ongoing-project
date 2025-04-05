@@ -210,7 +210,7 @@
             Controls.Add(lblGameName);
             Controls.Add(lblFormTitle);
             Name = "Form1";
-            Text = "ICA 7 - Nay Aung Latt";
+            Text = "ICA 8 - Nay Aung Latt";
             Load += Form1_Load;
             gpbPlatforms.ResumeLayout(false);
             gpbPlatforms.PerformLayout();
