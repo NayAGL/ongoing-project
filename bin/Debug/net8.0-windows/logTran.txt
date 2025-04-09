@@ -68,3 +68,23 @@ Markup Amount: $1.63 (Markup Rate: 15.00%)
 Final Price: $12.49
 ---------  [4/2/2025 8:01:03 PM]  ---------
 
+--------- Beginning of Transaction ---------
+Game: Roblox
+Platform: Xbox
+Price: $39.99
+Tax Amount: $3.50 (Tax Rate: 8.75%)
+Total Price: $43.49
+Markup Amount: $13.05 (Markup Rate: 30.00%)
+Final Price: $56.54
+---------  [4/8/2025 11:29:45 PM]  ---------
+
+--------- Beginning of Transaction ---------
+Game: TEKKEN 7
+Platform: PlayStation
+Price: $69.99
+Tax Amount: $6.12 (Tax Rate: 8.75%)
+Total Price: $76.11
+Markup Amount: $11.42 (Markup Rate: 15.00%)
+Final Price: $87.53
+---------  [4/8/2025 11:33:14 PM]  ---------
+

@@ -12,12 +12,13 @@ namespace Nay_Aung_Latt
         const string PLAYSTATION = "PlayStation";
         const string XBOX = "Xbox";
         private string platformType;
-        private string configFile = "platformCFG1.txt"; //Intentionally wrote the wrong file name.
+        internal string configFile = "platformCFG1.txt"; //Intentionally wrote the wrong file name.
         private string logFile = "logTran.txt";
         private double markupRatePC;
         private double markupRatePlayStation;
         private double markupRateXbox;
 
+        Form2 sf;
         public double MarkupRatePC
         {
             get { return markupRatePC; }
@@ -49,11 +50,13 @@ namespace Nay_Aung_Latt
         private void Form1_Load(object sender, EventArgs e)
         {
             StreamReader srCfg;
+            sf = new Form2(this);
+
             bool fileWasNotFound = true;
 
             rdoPC.Checked = true;
 
-           do
+            do
             {
                 try
                 {
@@ -87,6 +90,15 @@ namespace Nay_Aung_Latt
                 }
 
             } while (fileWasNotFound);
+        }
+
+        private void mnuSettings_Click(object sender, EventArgs e)
+        {
+            sf.txtPC.Text = MarkupRatePC.ToString();
+            sf.txtPlayStation.Text = MarkupRatePlayStation.ToString();
+            sf.txtXbox.Text = MarkupRateXbox.ToString();
+
+            sf.ShowDialog();
         }
 
         private void rdoPC_CheckedChanged(object sender, EventArgs e)
@@ -195,7 +207,7 @@ namespace Nay_Aung_Latt
                 log.WriteLine("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
                 log.WriteLine("Final Price: " + finalPrice.ToString("C"));
                 log.WriteLine("---------  [" + DateTime.Now.ToString("G") + "]  ---------");
-                log.WriteLine(""); 
+                log.WriteLine("");
 
                 //Closes 'logTran.txt'.
                 log.Close();
