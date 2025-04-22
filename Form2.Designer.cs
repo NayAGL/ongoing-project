@@ -124,7 +124,7 @@
             Controls.Add(lblPC);
             Controls.Add(lblForm2Title);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Markup Settings";
             ResumeLayout(false);
             PerformLayout();
         }

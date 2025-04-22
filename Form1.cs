@@ -1,8 +1,8 @@
 namespace Nay_Aung_Latt
 {
-    public partial class Form1 : Form
+    internal partial class Form1 : Form
     {
-        public Form1()
+        internal Form1()
         {
             InitializeComponent();
         }
@@ -19,7 +19,8 @@ namespace Nay_Aung_Latt
         private double markupRateXbox;
 
         Form2 sf;
-        public double MarkupRatePC
+
+        internal double MarkupRatePC
         {
             get { return markupRatePC; }
             set
@@ -29,7 +30,7 @@ namespace Nay_Aung_Latt
             }
         }
 
-        public double MarkupRatePlayStation
+        internal double MarkupRatePlayStation
         {
             get { return markupRatePlayStation; }
             set
@@ -38,7 +39,7 @@ namespace Nay_Aung_Latt
             }
         }
 
-        public double MarkupRateXbox
+        internal double MarkupRateXbox
         {
             get { return markupRateXbox; }
             set
