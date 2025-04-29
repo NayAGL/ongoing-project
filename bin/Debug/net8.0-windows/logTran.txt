@@ -1,90 +1,54 @@
 --------- Beginning of Transaction ---------
-Game: SIGNALIS
+Game: God of War (2018)
 Platform: PC
+Price: $69.99
+Tax Amount: $6.12 (Tax Rate: 8.75%)
+Total Price: $76.11
+Markup Amount: $9.13 (Markup Rate: 12.00%)
+Final Price: $85.25
+---------  [4/28/2025 9:59:39 PM]  ---------
+--------- Beginning of Transaction ---------
+Game: Signalis 
+Platform: PlayStation
 Price: $19.99
 Tax Amount: $1.75 (Tax Rate: 8.75%)
 Total Price: $21.74
-Markup Amount: $2.61 (Markup Rate: 12.00%)
-Final Price: $24.35
----------  [3/19/2025 9:15:32 PM]  ---------
-
+Markup Amount: $3.26 (Markup Rate: 15.00%)
+Final Price: $25.00
+---------  [4/28/2025 10:00:23 PM]  ---------
 --------- Beginning of Transaction ---------
-Game: R.E.P.O
+Game: Umamusume: Pretty Derby
+Platform: Xbox
+Price: $24.99
+Tax Amount: $2.19 (Tax Rate: 8.75%)
+Total Price: $27.18
+Markup Amount: $8.15 (Markup Rate: 30.00%)
+Final Price: $35.33
+---------  [4/28/2025 10:00:57 PM]  ---------
+--------- Beginning of Transaction ---------
+Game: Destiny 2 DLC
+Platform: PC
+Price: $59.99
+Tax Amount: $5.25 (Tax Rate: 8.75%)
+Total Price: $65.24
+Markup Amount: $7.83 (Markup Rate: 12.00%)
+Final Price: $73.07
+---------  [4/28/2025 10:08:27 PM]  ---------
+--------- Beginning of Transaction ---------
+Game: Wallpaper Engine
 Platform: PlayStation
 Price: $9.99
 Tax Amount: $0.87 (Tax Rate: 8.75%)
 Total Price: $10.86
 Markup Amount: $1.63 (Markup Rate: 15.00%)
 Final Price: $12.49
----------  [3/19/2025 9:16:00 PM]  ---------
-
+---------  [4/28/2025 10:08:51 PM]  ---------
 --------- Beginning of Transaction ---------
-Game: Minecraft
-Platform: Xbox
-Price: $39.99
-Tax Amount: $3.50 (Tax Rate: 8.75%)
-Total Price: $43.49
-Markup Amount: $13.05 (Markup Rate: 30.00%)
-Final Price: $56.54
----------  [3/19/2025 9:16:29 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: Monster Hunter: Wilds
-Platform: PlayStation
-Price: $59.99
-Tax Amount: $5.25 (Tax Rate: 8.75%)
-Total Price: $65.24
-Markup Amount: $9.79 (Markup Rate: 15.00%)
-Final Price: $75.02
----------  [3/26/2025 11:34:59 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: GoW (2018)
+Game: Stellar Blade
 Platform: Xbox
 Price: $49.99
 Tax Amount: $4.37 (Tax Rate: 8.75%)
 Total Price: $54.36
 Markup Amount: $16.31 (Markup Rate: 30.00%)
 Final Price: $70.67
----------  [3/26/2025 11:39:55 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: Nekopara Volume 1.
-Platform: PC
-Price: $19.99
-Tax Amount: $1.75 (Tax Rate: 8.75%)
-Total Price: $21.74
-Markup Amount: $2.61 (Markup Rate: 12.00%)
-Final Price: $24.35
----------  [3/26/2025 11:40:41 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: Strinova
-Platform: PlayStation
-Price: $9.99
-Tax Amount: $0.87 (Tax Rate: 8.75%)
-Total Price: $10.86
-Markup Amount: $1.63 (Markup Rate: 15.00%)
-Final Price: $12.49
----------  [4/2/2025 8:01:03 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: Roblox
-Platform: Xbox
-Price: $39.99
-Tax Amount: $3.50 (Tax Rate: 8.75%)
-Total Price: $43.49
-Markup Amount: $13.05 (Markup Rate: 30.00%)
-Final Price: $56.54
----------  [4/8/2025 11:29:45 PM]  ---------
-
---------- Beginning of Transaction ---------
-Game: TEKKEN 7
-Platform: PlayStation
-Price: $69.99
-Tax Amount: $6.12 (Tax Rate: 8.75%)
-Total Price: $76.11
-Markup Amount: $11.42 (Markup Rate: 15.00%)
-Final Price: $87.53
----------  [4/8/2025 11:33:14 PM]  ---------
-
+---------  [4/28/2025 10:09:22 PM]  ---------

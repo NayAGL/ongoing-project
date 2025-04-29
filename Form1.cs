@@ -12,7 +12,7 @@ namespace Nay_Aung_Latt
         const string PLAYSTATION = "PlayStation";
         const string XBOX = "Xbox";
         private string platformType;
-        internal string configFile = "platformCFG1.txt"; //Intentionally wrote the wrong file name.
+        internal string configFile = "platformCFG!.txt"; //Intentionally wrote the wrong file name.
         private string logFile = "logTran.txt";
         private double markupRatePC;
         private double markupRatePlayStation;
@@ -100,6 +100,35 @@ namespace Nay_Aung_Latt
             sf.txtXbox.Text = MarkupRateXbox.ToString();
 
             sf.ShowDialog();
+        }
+
+        private void showLogsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const int MAX_LOGLINES = 2000;
+            string[] logLines = new string[MAX_LOGLINES];
+            StreamReader sr = File.OpenText(logFile);
+            int numLines = 0;
+
+            while (!sr.EndOfStream)
+            {
+                logLines[numLines] = sr.ReadLine(); numLines++;
+            }
+
+            int logStart = -2;
+            int logEnd = 5;
+
+            for (int i = 0; i < numLines; i++)
+            {
+                if (logLines[i] == "Platform: " + platformType)
+                {
+                    for (int j = i + logStart; j <= i + logEnd; j++)
+                    {
+                        lstOutput.Items.Add(logLines[j]);
+                    }
+                }
+            }
+
+            sr.Close();
         }
 
         private void rdoPC_CheckedChanged(object sender, EventArgs e)
@@ -208,7 +237,6 @@ namespace Nay_Aung_Latt
                 log.WriteLine("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
                 log.WriteLine("Final Price: " + finalPrice.ToString("C"));
                 log.WriteLine("---------  [" + DateTime.Now.ToString("G") + "]  ---------");
-                log.WriteLine("");
 
                 //Closes 'logTran.txt'.
                 log.Close();

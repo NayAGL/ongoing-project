@@ -44,6 +44,8 @@
             OFD = new OpenFileDialog();
             mnuStripSettings = new MenuStrip();
             mnuSettings = new ToolStripMenuItem();
+            showLogsToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
             gpbPlatforms.SuspendLayout();
             mnuStripSettings.SuspendLayout();
             SuspendLayout();
@@ -214,7 +216,7 @@
             // mnuStripSettings
             // 
             mnuStripSettings.ImageScalingSize = new Size(24, 24);
-            mnuStripSettings.Items.AddRange(new ToolStripItem[] { mnuSettings });
+            mnuStripSettings.Items.AddRange(new ToolStripItem[] { mnuSettings, showLogsToolStripMenuItem, quitToolStripMenuItem });
             mnuStripSettings.Location = new Point(0, 0);
             mnuStripSettings.Name = "mnuStripSettings";
             mnuStripSettings.Size = new Size(905, 33);
@@ -227,6 +229,20 @@
             mnuSettings.Size = new Size(92, 29);
             mnuSettings.Text = "Settings";
             mnuSettings.Click += mnuSettings_Click;
+            // 
+            // showLogsToolStripMenuItem
+            // 
+            showLogsToolStripMenuItem.Name = "showLogsToolStripMenuItem";
+            showLogsToolStripMenuItem.Size = new Size(115, 29);
+            showLogsToolStripMenuItem.Text = "Show Logs";
+            showLogsToolStripMenuItem.Click += showLogsToolStripMenuItem_Click;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(62, 29);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += btnExit_Click;
             // 
             // Form1
             // 
@@ -247,7 +263,7 @@
             MainMenuStrip = mnuStripSettings;
             Margin = new Padding(4);
             Name = "Form1";
-            Text = "ICA 9 - Nay Aung Latt";
+            Text = "ICA 10 - Nay Aung Latt";
             Load += Form1_Load;
             gpbPlatforms.ResumeLayout(false);
             gpbPlatforms.PerformLayout();
@@ -275,5 +291,7 @@
         private OpenFileDialog OFD;
         private MenuStrip mnuStripSettings;
         private ToolStripMenuItem mnuSettings;
+        private ToolStripMenuItem showLogsToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
     }
 }
