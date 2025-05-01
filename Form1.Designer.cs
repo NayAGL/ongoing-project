@@ -263,7 +263,7 @@
             MainMenuStrip = mnuStripSettings;
             Margin = new Padding(4);
             Name = "Form1";
-            Text = "ICA 10 - Nay Aung Latt";
+            Text = "ICA 11 - Nay Aung Latt";
             Load += Form1_Load;
             gpbPlatforms.ResumeLayout(false);
             gpbPlatforms.PerformLayout();

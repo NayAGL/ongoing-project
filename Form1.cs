@@ -1,3 +1,6 @@
+using System.Reflection.Metadata;
+using Microsoft.VisualBasic;
+
 namespace Nay_Aung_Latt
 {
     internal partial class Form1 : Form
@@ -11,6 +14,9 @@ namespace Nay_Aung_Latt
         const string PC = "PC";
         const string PLAYSTATION = "PlayStation";
         const string XBOX = "Xbox";
+        const int DISPLAY_LISTBOX = 1;
+        const int DISPLAY_LOGFILE = 2;
+        const int DISPLAY_BOTH = 3;
         private string platformType;
         internal string configFile = "platformCFG!.txt"; //Intentionally wrote the wrong file name.
         private string logFile = "logTran.txt";
@@ -115,7 +121,7 @@ namespace Nay_Aung_Latt
             }
 
             int logStart = -2;
-            int logEnd = 5;
+            int logEnd = 6;
 
             for (int i = 0; i < numLines; i++)
             {
@@ -176,13 +182,27 @@ namespace Nay_Aung_Latt
             rdoPC.Checked = true;
         }
 
+        private void OutputDisplay(int outputType, string outputMessage)
+        {
+            StreamWriter log;
+
+            if (outputType == DISPLAY_LISTBOX || outputType == DISPLAY_BOTH)
+            {
+                lstOutput.Items.Add(outputMessage);
+            }
+
+            if (outputType == DISPLAY_LOGFILE || outputType == DISPLAY_BOTH)
+            {
+                log = File.AppendText(logFile); log.WriteLine(outputMessage); log.Close();
+            }
+        }
+
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             //Variables.
             string gameName;
             double gamePrice, taxRate, taxAmount, totalPrice, markupRate, markupAmount, finalPrice;
             bool priceValid;
-            StreamWriter log;
 
             //Assigning variables.
             gameName = txtGameName.Text;
@@ -216,30 +236,15 @@ namespace Nay_Aung_Latt
                 finalPrice = totalPrice + markupAmount;
 
                 //Output.
-                lstOutput.Items.Add("Game: " + gameName);
-                lstOutput.Items.Add("Platform: " + platformType);
-                lstOutput.Items.Add("Price: " + gamePrice.ToString("C"));
-                lstOutput.Items.Add("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
-                lstOutput.Items.Add("Total Price: " + totalPrice.ToString("C"));
-                lstOutput.Items.Add("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
-                lstOutput.Items.Add("Final Price: " + finalPrice.ToString("C"));
-
-                //Opening the file to append it.
-                log = File.AppendText(logFile);
-
-                //Writing each line in 'logTran.txt'.
-                log.WriteLine("--------- Beginning of Transaction ---------");
-                log.WriteLine("Game: " + gameName);
-                log.WriteLine("Platform: " + platformType);
-                log.WriteLine("Price: " + gamePrice.ToString("C"));
-                log.WriteLine("Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
-                log.WriteLine("Total Price: " + totalPrice.ToString("C"));
-                log.WriteLine("Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
-                log.WriteLine("Final Price: " + finalPrice.ToString("C"));
-                log.WriteLine("---------  [" + DateTime.Now.ToString("G") + "]  ---------");
-
-                //Closes 'logTran.txt'.
-                log.Close();
+                OutputDisplay(DISPLAY_LOGFILE, "--------- Beginning of Transaction ---------");
+                OutputDisplay(DISPLAY_BOTH, "Game: " + gameName);
+                OutputDisplay(DISPLAY_BOTH, "Platform: " + platformType);
+                OutputDisplay(DISPLAY_BOTH, "Price: " + gamePrice.ToString("C"));
+                OutputDisplay(DISPLAY_BOTH, "Tax Amount: " + taxAmount.ToString("C") + " (Tax Rate: " + taxRate.ToString("P") + ")");
+                OutputDisplay(DISPLAY_BOTH, "Total Price: " + totalPrice.ToString("C"));
+                OutputDisplay(DISPLAY_BOTH, "Markup Amount: " + markupAmount.ToString("C") + " (Markup Rate: " + markupRate.ToString("P") + ")");
+                OutputDisplay(DISPLAY_BOTH, "Final Price: " + finalPrice.ToString("C"));
+                OutputDisplay(DISPLAY_LOGFILE, "---------  [" + DateTime.Now.ToString("G") + "]  ---------");
             }
             else { lstOutput.Items.Add("Invalid price value."); }
 
