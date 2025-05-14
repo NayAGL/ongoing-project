@@ -1,6 +1,3 @@
-using System.Reflection.Metadata;
-using Microsoft.VisualBasic;
-
 namespace Nay_Aung_Latt
 {
     internal partial class Form1 : Form
