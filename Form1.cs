@@ -15,7 +15,7 @@ namespace Nay_Aung_Latt
         const int DISPLAY_LOGFILE = 2;
         const int DISPLAY_BOTH = 3;
         private string platformType;
-        internal string configFile = "platformCFG!.txt"; //Intentionally wrote the wrong file name.
+        internal string configFile = "platformCFG.txt"; //Intentionally wrote the wrong file name.
         private string logFile = "logTran.txt";
         private double markupRatePC;
         private double markupRatePlayStation;
